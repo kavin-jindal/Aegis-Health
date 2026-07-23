@@ -31,6 +31,7 @@ Aegis transforms family healthcare from a chaotic, reactive experience into a se
 
 ## Architecture
 
+```
 Frontend (Single-page SPA)
 ├── HTML/CSS/JS (3800+ lines)
 └── Hash-based routing
@@ -49,6 +50,7 @@ External Services
 ├── Scraping: Anakin.io
 ├── Data: FDA OpenFDA, WHO
 └── Storage: Supabase Cloud
+```
 
 ## Tech Stack
 
@@ -63,40 +65,6 @@ External Services
 | **Pharmacy Data** | Anakin.io | Live price comparison |
 | **Med Info** | FDA OpenFDA, WHO | Drug composition, side effects |
 
-## Design Language
-
-### Color System
-- **Sage Green** (`#8fae8b`): Primary brand color
-- **Coral** (`#e0896a`): Warnings, actions
-- **Sky Blue** (`#7bb5c9`): Health metrics
-- **Lavender** (`#a89bc4`): Medical records
-- **Amber** (`#d4a84b`): Alerts, progress
-
-### UI Principles
-- **Glassmorphism**: Semi-transparent cards with backdrop blur
-- **Dark Theme**: Forest green base (`#1a2e1f`) for extended use
-- **Floating Orbs**: Animated ambient background
-- **Dot Grid**: Subtle texture pattern
-- **Smooth Transitions**: 0.32s cubic-bezier easing
-
-### Typography
-- **Headings**: Outfit (bold, sans-serif)
-- **Body**: DM Sans (clean, readable)
-- **Code**: System fonts
-
-## Installation
-
-### Prerequisites
-- Python 3.8+
-- Supabase account (or local setup)
-- Environment variables (see `.env.example`)
-
-### Setup
-
-```bash
-pip install -r requirements.txt
-python app.py
-```
 
 ## Application Flow
 
@@ -105,6 +73,23 @@ python app.py
 3. **Consult AI**: Ask health questions with contextual assistance
 4. **Track Progress**: Monitor checkups, medications, and fitness goals
 5. **Generate Reports**: Export comprehensive health reports
+
+## Screenshots
+
+### Dashboard Overview
+![Dashboard](Screenshot%202026-07-23%20170209.png)
+
+### AI Health Assistant
+![AI Assistant](Screenshot%202026-07-23%20172055.png)
+
+### Medical Records & Checkups
+![Medical Records](Screenshot%202026-07-23%20174651.png)
+
+### Fitness Goals & Price Comparison
+![Fitness & Prices](Screenshot%202026-07-23%20220344.png)
+
+### Settings & Family Management
+![Settings](Screenshot%202026-07-23%20221111.png)
 
 ## Contact
 
@@ -125,3 +110,4 @@ python app.py
 - [Demo Video](https://github.com/anomalyco/opencode/blob/aegis-health-assistant/assets/demo.mp4?raw=true)
 
 *
+
