@@ -30,9 +30,11 @@ Aegis transforms family healthcare from a chaotic, reactive experience into a se
 - **Multi-Member Support**: Unlimited family members from single dashboard
 
 ## Architecture
+## Architecture
 
 Frontend (Single-page SPA)
-├── HTML/CSS/JS
+├── HTML/CSS/JS (3800+ lines)
+└── Hash-based routing
 
 Backend (Flask Microservices)
 ├── 34 REST API endpoints
@@ -40,6 +42,7 @@ Backend (Flask Microservices)
 
 Database
 ├── Supabase (PostgreSQL)
+└── 11 optimized tables with RLS
 
 External Services
 ├── AI: Groq API (Llama 3.1)
