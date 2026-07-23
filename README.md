@@ -92,7 +92,10 @@ External Services
 
 ![AI Assistant](Screenshot%202026-07-23%20172055.png)
 
+### Medicine Price Comparison 
+
 ![Medical Records](Screenshot%202026-07-23%20174651.png)
 
+### AI Health Assistant
 <img width="2345" height="1393" alt="image" src="https://github.com/user-attachments/assets/c0fe570c-45ba-4d1b-b1fb-e64b7a1d04ec" />
 
