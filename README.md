@@ -16,7 +16,7 @@ Aegis transforms family healthcare from a chaotic, reactive experience into a se
 - **Doctors**: Directory of all family doctors with contact info and specialties
 - **Checkups**: Calendar-based checkup tracking with follow-up alerts
 - **Medicines**: Prescription tracking with dosage and schedule reminders
-- **Medical Records**: Secure document upload and management (including DICOM imaging)
+- **Medical Records**: Secure document upload and management 
 
 ### Health Analytics
 - **Fitness Goals**: Daily tracking of steps, calories, water, sleep
