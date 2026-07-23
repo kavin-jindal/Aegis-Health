@@ -1,4 +1,7 @@
+<img width="400" height="400" alt="kairva" src="https://github.com/user-attachments/assets/84354b9b-592a-40a1-85cc-061831ae01e8" />
+
 # Aegis - Family Health Dashboard
+
 
 A comprehensive family health management platform that helps families track, manage, and understand their healthcare journey through AI-powered assistance and unified medical records.
 
@@ -87,34 +90,11 @@ External Services
 ### Dashboard Overview
 ![Dashboard](Screenshot%202026-07-23%20170209.png)
 
-### AI Health Assistant
 ![AI Assistant](Screenshot%202026-07-23%20172055.png)
 
-### Medical Records & Checkups
 ![Medical Records](Screenshot%202026-07-23%20174651.png)
 
-### Fitness Goals & Price Comparison
 ![Fitness & Prices](Screenshot%202026-07-23%20220344.png)
 
-### Settings & Family Management
 ![Settings](Screenshot%202026-07-23%20221111.png)
 
-## Contact
-
-### Support
-- **GitHub Issues**: For bug reports and feature requests
-- **Email**: support@example.com
-
-### Social Media
-- **GitHub**: @anomalyco
-- **Twitter**: @anomalyco
-
----
-
-*Created with ❤️ by the Aegis Team*
-
-### Quick Links
-- [GitHub Repository](https://github.com/anomalyco/opencode)
-- [Demo Video](https://github.com/anomalyco/opencode/blob/aegis-health-assistant/assets/demo.mp4?raw=true)
-
-*
