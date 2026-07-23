@@ -2942,19 +2942,7 @@ Let me now check what Supabase buckets exist, the .env for credentials, and read
 <type>file</type>
 <content>
 1: # Supabase
-2: SUPABASE_URL=https://xiwutyeirjgspgxzqadc.supabase.co
-3: SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhpd3V0eWVpcmpnc3BneHpxYWRjIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4NDMzMTgzNCwiZXhwIjoyMDk5OTA3ODM0fQ.LNfVtPOnw3rbS4qISF1zOhYuAcHfG4STuD62Dbfe8dQ
-4: SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhpd3V0eWVpcmpnc3BneHpxYWRjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQzMzE4MzQsImV4cCI6MjA5OTkwNzgzNH0.rWTt5Zn1j25JkTV12Rbi3DDJgJOloOBJVW6HB5R3MCU
-5: 
-6: # Anakin.io
-7: ANAKIN_API_KEY=ask_ef6631a6e04a108b2a1d34b9626894ecedc689b2e393388c7f70953aa98ef13d
-8: GROQ_API_KEY=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
-9: ELEVENLABS_API_KEY=sk_f1276fbc056a211613c1ab45a834ed1c27e3ac1145915337
-10: # Supermemory
-11: SUPERMEMORY_API_KEY=your-supermemory-api-key
-
 (End of file - total 11 lines)
-</content>
 ```
 
 **Tool: read**
