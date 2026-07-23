@@ -33,9 +33,7 @@ Aegis transforms family healthcare from a chaotic, reactive experience into a se
 
 Frontend (Single-page SPA)
 
-├── HTML/CSS/JS (3800+ lines)
-
-└── Hash-based routing
+├── HTML/CSS/JS
 
 Backend (Flask Microservices)
 
@@ -47,7 +45,6 @@ Database
 
 ├── Supabase (PostgreSQL)
 
-└── 11 optimized tables with RLS
 
 External Services
 
