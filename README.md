@@ -1,4 +1,7 @@
+<img width="400" height="400" alt="kairva" src="https://github.com/user-attachments/assets/84354b9b-592a-40a1-85cc-061831ae01e8" />
+
 # Aegis - Family Health Dashboard
+
 
 A comprehensive family health management platform that helps families track, manage, and understand their healthcare journey through AI-powered assistance and unified medical records.
 
@@ -13,7 +16,7 @@ Aegis transforms family healthcare from a chaotic, reactive experience into a se
 - **Doctors**: Directory of all family doctors with contact info and specialties
 - **Checkups**: Calendar-based checkup tracking with follow-up alerts
 - **Medicines**: Prescription tracking with dosage and schedule reminders
-- **Medical Records**: Secure document upload and management (including DICOM imaging)
+- **Medical Records**: Secure document upload and management 
 
 ### Health Analytics
 - **Fitness Goals**: Daily tracking of steps, calories, water, sleep
@@ -87,16 +90,12 @@ External Services
 ### Dashboard Overview
 ![Dashboard](Screenshot%202026-07-23%20170209.png)
 
-### AI Health Assistant
 ![AI Assistant](Screenshot%202026-07-23%20172055.png)
 
-### Medical Records & Checkups
+### Medicine Price Comparison 
+
 ![Medical Records](Screenshot%202026-07-23%20174651.png)
 
-### Fitness Goals & Price Comparison
-![Fitness & Prices](Screenshot%202026-07-23%20220344.png)
+### AI Health Assistant
+<img width="2345" height="1393" alt="image" src="https://github.com/user-attachments/assets/c0fe570c-45ba-4d1b-b1fb-e64b7a1d04ec" />
 
-### Settings & Family Management
-![Settings](Screenshot%202026-07-23%20221111.png)
-
-*
