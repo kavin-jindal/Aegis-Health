@@ -1,0 +1,40 @@
+/* ============================================================
+   TOKENS
+   ============================================================ */
+:root {
+  --bg:          #1a2e1f;
+  --bg-card:     rgba(30, 52, 36, 0.55);
+  --bg-hover:    rgba(38, 64, 44, 0.72);
+  --bg-glass:    rgba(255,255,255,0.04);
+  --bg-input:    rgba(255,255,255,0.04);
+
+  --cream:       #f5efe6;
+  --cream-muted: #c4bdb0;
+  --sage:        #8fae8b;
+  --sage-dark:   #5a7d56;
+  --sage-dim:    rgba(143,174,139,0.14);
+  --coral:       #e0896a;
+  --coral-soft:  #d4956b;
+  --coral-dim:   rgba(224,137,106,0.14);
+  --lavender:    #a89bc4;
+  --lavender-dim:rgba(168,155,196,0.14);
+  --sky:         #7bb5c9;
+  --sky-dim:     rgba(123,181,201,0.14);
+  --amber:       #d4a84b;
+  --amber-dim:   rgba(212,168,75,0.14);
+
+  --text:        #f0ebe3;
+  --text-2:      #9ba89a;
+  --text-dim:    #6b7a6a;
+
+  --border:      rgba(255,255,255,0.06);
+  --border-h:    rgba(255,255,255,0.13);
+
+  --sidebar-w:   262px;
+  --topbar-h:    0px; /* collapsed topbar — member info lives in sidebar footer */
+  --r:           20px;
+  --r-sm:        12px;
+  --r-xs:        8px;
+  --ease:        cubic-bezier(0.4, 0, 0.2, 1);
+  --trans:       0.32s cubic-bezier(0.4, 0, 0.2, 1);
+}

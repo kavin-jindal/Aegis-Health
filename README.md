@@ -99,22 +99,4 @@ External Services
 ### Settings & Family Management
 ![Settings](Screenshot%202026-07-23%20221111.png)
 
-## Contact
-
-### Support
-- **GitHub Issues**: For bug reports and feature requests
-- **Email**: support@example.com
-
-### Social Media
-- **GitHub**: @anomalyco
-- **Twitter**: @anomalyco
-
----
-
-*Created with ❤️ by the Aegis Team*
-
-### Quick Links
-- [GitHub Repository](https://github.com/anomalyco/opencode)
-- [Demo Video](https://github.com/anomalyco/opencode/blob/aegis-health-assistant/assets/demo.mp4?raw=true)
-
 *

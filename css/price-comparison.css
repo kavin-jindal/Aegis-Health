@@ -1,0 +1,231 @@
+/* ============================================================
+   PRICE COMPARISON — Panacea-style
+   ============================================================ */
+.price-search-zone { margin-bottom: 24px; }
+.price-search-label {
+  font-family: 'Outfit', sans-serif; font-size: 0.7rem; font-weight: 600;
+  color: var(--sage); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px;
+}
+.price-search-row { display: flex; gap: 12px; align-items: stretch; margin-bottom: 14px; }
+.price-search-input {
+  flex: 1; padding: 14px 16px; border-radius: var(--r-sm);
+  border: 1.5px solid var(--border); background: rgba(255,255,255,0.03);
+  color: var(--cream); font-family: 'Outfit', sans-serif; font-size: 1.05rem;
+  outline: none; transition: var(--trans);
+}
+.price-search-input:focus { border-color: var(--sage); }
+.price-search-input::placeholder { color: var(--text-dim); }
+.price-search-btn { white-space: nowrap; padding: 14px 22px; }
+.price-chips { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+.price-chip {
+  font-family: 'Outfit', sans-serif; font-size: 0.75rem; color: var(--text-2);
+  border: 1px solid var(--border); padding: 6px 14px; border-radius: 20px;
+  cursor: pointer; transition: var(--trans);
+}
+.price-chip:hover { border-color: var(--sage); color: var(--cream); background: var(--sage-dim); }
+.price-hint { font-size: 0.78rem; color: var(--text-dim); font-style: italic; }
+
+.price-loading {
+  display: none; margin-top: 40px; font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem; color: var(--sage); letter-spacing: 0.5px;
+}
+.price-loading.active { display: block; }
+.price-loading::after { content: ''; display: inline-block; width: 1ch; animation: dots 1s steps(4,end) infinite; }
+@keyframes dots { 0%{content:''} 25%{content:'.'} 50%{content:'..'} 75%{content:'...'} 100%{content:''} }
+
+.price-error {
+  display: none; margin-top: 40px; font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem; color: var(--coral);
+}
+.price-error.active { display: flex; align-items: center; gap: 12px; }
+.price-error button {
+  font-family: 'Outfit', sans-serif; font-size: 0.75rem; color: var(--cream);
+  background: transparent; border: 1px solid var(--coral); border-radius: var(--r-xs);
+  padding: 5px 14px; cursor: pointer;
+}
+.price-error button:hover { background: rgba(224,137,106,0.1); }
+
+.price-results { display: none; margin-top: 32px; }
+.price-results.active { display: block; }
+.price-results-head h2 {
+  font-family: 'Outfit', sans-serif; font-size: 1.6rem; font-weight: 600;
+  color: var(--cream); margin: 0 0 4px;
+}
+.price-res-meta {
+  font-family: 'Outfit', sans-serif; font-size: 0.78rem; color: var(--text-dim);
+}
+
+/* Monograph card */
+.price-monograph {
+  margin-top: 18px; padding: 18px 20px; border-radius: var(--r);
+  background: rgba(143,174,139,0.06); border: 1px solid rgba(143,174,139,0.15);
+  position: relative; display: flex; gap: 24px; flex-wrap: wrap;
+}
+.price-monograph::before {
+  content: "MONOGRAPH"; position: absolute; top: -9px; left: 16px;
+  background: var(--sage-dark); color: var(--cream);
+  font-family: 'Outfit', sans-serif; font-size: 9px; font-weight: 600;
+  letter-spacing: 2px; padding: 3px 10px; border-radius: var(--r-xs);
+}
+.pm-field { min-width: 130px; }
+.pm-field .k {
+  font-family: 'Outfit', sans-serif; font-size: 9px; font-weight: 600;
+  color: var(--text-dim); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 4px;
+}
+.pm-field .v { font-size: 0.88rem; color: var(--cream); line-height: 1.45; }
+.pm-field .v.pm-wide { font-size: 0.82rem; color: var(--text-2); }
+
+/* Summary strip */
+.price-summary-strip {
+  margin-top: 16px; padding: 12px 16px; border-radius: var(--r-sm);
+  background: rgba(212,168,75,0.08); border: 1px dashed var(--amber);
+  font-family: 'Outfit', sans-serif; font-size: 0.82rem; color: var(--amber);
+  display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+}
+
+/* Store grid */
+.price-store-grid {
+  margin-top: 28px; display: grid;
+  grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: start;
+}
+@media (max-width: 980px) { .price-store-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .price-store-grid { grid-template-columns: 1fr; } }
+
+.ps-col { }
+.ps-head {
+  display: flex; align-items: center; gap: 8px; padding-bottom: 8px; margin-bottom: 10px;
+  border-bottom: 2px solid var(--ps-color, var(--sage));
+}
+.ps-head .ps-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--ps-color, var(--sage)); flex: none; }
+.ps-head .ps-name {
+  font-family: 'Outfit', sans-serif; font-size: 0.78rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.5px; color: var(--cream);
+}
+.ps-head .ps-count {
+  margin-left: auto; font-size: 0.7rem; color: var(--text-dim);
+}
+
+.ps-listing {
+  position: relative; padding: 14px; margin-bottom: 12px;
+  border-radius: var(--r-sm); border: 1px solid var(--border);
+  background: rgba(255,255,255,0.025); transition: var(--trans);
+}
+.ps-listing:hover { background: rgba(255,255,255,0.04); border-color: var(--border-h); }
+.ps-listing.ps-best {
+  border-color: var(--amber); background: rgba(212,168,75,0.06);
+  box-shadow: 0 0 0 1px rgba(212,168,75,0.15);
+}
+.ps-listing.ps-out { opacity: 0.5; filter: grayscale(0.3); }
+
+.ps-best-badge {
+  position: absolute; top: -1px; right: 12px;
+  background: var(--amber); color: #1a1a1a;
+  font-family: 'Outfit', sans-serif; font-size: 9px; font-weight: 700;
+  letter-spacing: 1px; padding: 3px 10px; border-radius: 0 0 var(--r-xs) var(--r-xs);
+  text-transform: uppercase;
+}
+
+.ps-brand {
+  font-family: 'Outfit', sans-serif; font-size: 0.95rem; font-weight: 500; color: var(--cream);
+  margin-bottom: 2px;
+}
+.ps-generic {
+  font-size: 0.65rem; color: var(--sage); font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.5px;
+}
+
+.ps-price-row { display: flex; align-items: baseline; gap: 8px; margin-top: 8px; }
+.ps-mrp {
+  font-family: 'Outfit', sans-serif; font-size: 0.75rem; color: var(--text-dim);
+  text-decoration: line-through;
+}
+.ps-price {
+  font-family: 'Outfit', sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--cream);
+}
+
+.ps-pack { font-size: 0.72rem; color: var(--text-dim); margin-top: 3px; }
+
+.ps-foot { display: flex; align-items: center; justify-content: space-between; margin-top: 10px; gap: 8px; }
+.ps-stock {
+  display: inline-block; font-family: 'Outfit', sans-serif; font-size: 9px; font-weight: 600;
+  letter-spacing: 1px; text-transform: uppercase; border: 1.5px solid; border-radius: var(--r-xs);
+  padding: 2px 8px; transform: rotate(-4deg);
+}
+.ps-stock.ps-in { color: #6db57a; border-color: #6db57a; }
+.ps-stock.ps-out { color: var(--coral); border-color: var(--coral); }
+
+.ps-actions { display: flex; gap: 6px; align-items: center; }
+.ps-add-cart {
+  font-family: 'Outfit', sans-serif; font-size: 0.65rem; font-weight: 600;
+  letter-spacing: 0.5px; text-transform: uppercase; background: transparent;
+  border: 1.5px solid var(--amber); color: var(--amber); border-radius: var(--r-xs);
+  padding: 5px 10px; cursor: pointer; transition: var(--trans); white-space: nowrap;
+}
+.ps-add-cart:hover { background: var(--amber); color: #1a1a1a; }
+.ps-add-cart.added { background: #6db57a; border-color: #6db57a; color: var(--cream); }
+.ps-buy {
+  font-family: 'Outfit', sans-serif; font-size: 0.65rem; font-weight: 600;
+  letter-spacing: 0.5px; text-transform: uppercase; text-decoration: none;
+  color: var(--cream); background: rgba(255,255,255,0.08); padding: 5px 10px;
+  border-radius: var(--r-xs); transition: var(--trans);
+}
+.ps-buy:hover { background: rgba(255,255,255,0.14); }
+
+.ps-empty { padding: 14px 0; font-size: 0.78rem; color: var(--text-dim); font-style: italic; }
+
+/* Cart badge */
+.price-cart-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 18px; height: 18px; border-radius: 9px; padding: 0 5px;
+  background: var(--sage); color: #1a1a1a; font-size: 0.65rem; font-weight: 700;
+  margin-left: 4px;
+}
+
+/* Cart overlay */
+.price-cart-overlay {
+  display: none; position: fixed; inset: 0; z-index: 1000;
+  background: rgba(0,0,0,0.6); backdrop-filter: blur(4px);
+  justify-content: center; align-items: center; padding: 24px;
+}
+.price-cart-overlay.active { display: flex; }
+.price-cart-modal {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r);
+  max-width: 600px; width: 100%; max-height: 80vh; display: flex; flex-direction: column;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+}
+.price-cart-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 20px 14px; border-bottom: 1px solid var(--border);
+}
+.price-cart-header h2 {
+  font-family: 'Outfit', sans-serif; font-size: 1.1rem; font-weight: 600; color: var(--cream); margin: 0;
+}
+.price-cart-close {
+  background: transparent; border: none; font-size: 20px; color: var(--text-dim);
+  cursor: pointer; padding: 4px; line-height: 1;
+}
+.price-cart-close:hover { color: var(--cream); }
+.price-cart-items { flex: 1; overflow-y: auto; padding: 12px 20px; }
+.price-cart-empty {
+  font-size: 0.82rem; color: var(--text-dim); text-align: center; padding: 28px 0; font-style: italic;
+}
+.pc-item {
+  display: flex; align-items: center; gap: 12px; padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+.pc-item:last-child { border-bottom: none; }
+.pc-item-info { flex: 1; min-width: 0; }
+.pc-item-name { font-size: 0.88rem; font-weight: 500; color: var(--cream); }
+.pc-item-meta { font-size: 0.7rem; color: var(--text-dim); margin-top: 2px; }
+.pc-item-price { font-family: 'Outfit', sans-serif; font-size: 0.95rem; font-weight: 600; color: var(--cream); white-space: nowrap; }
+.pc-item-remove {
+  background: transparent; border: none; color: var(--coral); cursor: pointer;
+  font-size: 16px; padding: 4px 6px; opacity: 0.6; transition: var(--trans);
+}
+.pc-item-remove:hover { opacity: 1; }
+.price-cart-footer {
+  padding: 14px 20px 18px; border-top: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
+.price-cart-total { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1rem; color: var(--cream); }
+.price-cart-actions { display: flex; gap: 8px; }

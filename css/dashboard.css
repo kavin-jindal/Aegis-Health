@@ -1,0 +1,116 @@
+/* ============================================================
+   DASHBOARD PROMPT BANNER
+   ============================================================ */
+.dash-prompt-banner {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 20px;
+  border-left: 3px solid var(--amber);
+}
+.dash-prompt-icon {
+  flex-shrink: 0; color: var(--amber);
+  display: flex; align-items: center; justify-content: center;
+}
+.dash-prompt-body { flex: 1; }
+.dash-prompt-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem; font-weight: 600; color: var(--cream);
+  margin-bottom: 2px;
+}
+.dash-prompt-sub {
+  font-size: 0.72rem; color: var(--text-dim);
+}
+
+/* ============================================================
+   DASHBOARD STAT GRID
+   ============================================================ */
+.stat-grid {
+  display: grid; grid-template-columns: repeat(4,1fr);
+  gap: 18px; margin-bottom: 22px;
+}
+.stat-card {
+  padding: 22px; cursor: default; transform: translateY(0);
+  transition: transform var(--trans), background var(--trans), border-color var(--trans);
+}
+.stat-card:hover { transform: translateY(-3px); box-shadow: 0 20px 60px rgba(0,0,0,.18); }
+
+.sc-icon {
+  width: 42px; height: 42px; border-radius: 13px;
+  display: flex; align-items: center; justify-content: center; margin-bottom: 16px;
+}
+.sc-icon svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.sc-sage    { background: var(--sage-dim);    color: var(--sage); }
+.sc-coral   { background: var(--coral-dim);   color: var(--coral); }
+.sc-sky     { background: var(--sky-dim);     color: var(--sky); }
+.sc-lavender{ background: var(--lavender-dim);color: var(--lavender); }
+.sc-amber   { background: var(--amber-dim);   color: var(--amber); }
+
+.sc-val {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.7rem; font-weight: 700;
+  color: var(--cream); letter-spacing: -.03em;
+  line-height: 1; margin-bottom: 4px;
+}
+.sc-label {
+  font-family: 'Outfit', sans-serif;
+  font-size: .68rem; font-weight: 600;
+  color: var(--text-dim); text-transform: uppercase;
+  letter-spacing: .1em; margin-bottom: 7px;
+}
+.sc-sub { font-size: .8rem; color: var(--text-2); font-weight: 300; }
+
+/* ============================================================
+   DASHBOARD ROWS & PANELS
+   ============================================================ */
+.dash-row2 {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 18px; margin-bottom: 22px;
+}
+.dash-panel { padding: 22px; }
+.dash-panel-hd {
+  display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px;
+}
+.dash-panel-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: .8rem; font-weight: 600;
+  color: var(--cream); text-transform: uppercase; letter-spacing: .08em;
+}
+.dash-panel-link {
+  font-family: 'Outfit', sans-serif;
+  font-size: .78rem; color: var(--sage);
+  cursor: pointer; background: none; border: none; padding: 0;
+  transition: opacity var(--trans);
+}
+.dash-panel-link:hover { opacity: .7; }
+
+/* ============================================================
+   FITNESS MINI (dashboard)
+   ============================================================ */
+.fit-mini { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.fit-mini-hd { display: flex; justify-content: space-between; font-size: .76rem; margin-bottom: 6px; }
+.fit-mini-name { color: var(--text-2); }
+.fit-mini-val  { color: var(--cream); font-weight: 500; font-family: 'Outfit', sans-serif; }
+.fit-mini-track { height: 5px; border-radius: 10px; background: rgba(255,255,255,0.06); overflow: hidden; }
+.fit-mini-fill { height: 100%; border-radius: 10px; width: 0; transition: width .6s cubic-bezier(0.22,1,0.36,1); }
+.fill-sage     { background: linear-gradient(90deg,var(--sage-dark),var(--sage)); }
+.fill-coral    { background: linear-gradient(90deg,var(--coral-soft),var(--coral)); }
+.fill-sky      { background: linear-gradient(90deg,#5a9bb0,var(--sky)); }
+.fill-lavender { background: linear-gradient(90deg,#8a7baa,var(--lavender)); }
+.fill-amber    { background: linear-gradient(90deg,#a8822e,var(--amber)); }
+
+/* ============================================================
+   QUICK NAV GRID (dashboard)
+   ============================================================ */
+.qn-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; }
+.qn-tile {
+  background: rgba(255,255,255,0.025); border: 1px solid var(--border);
+  border-radius: 14px; padding: 14px 10px;
+  display: flex; flex-direction: column; align-items: center; gap: 9px;
+  cursor: pointer; font-family: 'Outfit', sans-serif;
+  color: var(--text-2); text-align: center; transition: var(--trans);
+}
+.qn-tile:hover {
+  background: var(--sage-dim); border-color: rgba(143,174,139,.3);
+  color: var(--sage); transform: translateY(-2px);
+}
+.qn-tile svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.qn-tile span { font-size: .73rem; font-weight: 500; }

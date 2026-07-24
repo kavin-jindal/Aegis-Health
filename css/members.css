@@ -1,0 +1,66 @@
+/* ============================================================
+   MEMBER GRID (persistent across all pages)
+   ============================================================ */
+.member-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 8px; margin-bottom: 12px;
+}
+.member-card {
+  padding: 10px 8px; cursor: pointer; text-align: center;
+  transition: transform var(--trans), box-shadow var(--trans);
+}
+.member-card:hover {
+  transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,.18);
+}
+.member-card .av-ring {
+  width: 32px; height: 32px; padding: 2px; margin: 0 auto 6px;
+}
+.member-card .av-inner { font-size: 0.65rem; }
+.member-card-name {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.75rem; font-weight: 600; color: var(--cream);
+  margin-bottom: 1px;
+}
+.member-card-relation {
+  font-size: 0.62rem; color: var(--text-dim); text-transform: capitalize;
+}
+.member-card.active {
+  border-color: var(--sage); background: rgba(143,174,139,0.1);
+  box-shadow: 0 0 0 1px rgba(143,174,139,0.3), 0 2px 12px rgba(143,174,139,0.15);
+}
+.member-card { position: relative; }
+.member-card-del {
+  position: absolute; top: 6px; right: 6px;
+  width: 18px; height: 18px; border-radius: 50%; border: none;
+  background: transparent; color: var(--text-dim); cursor: pointer;
+  font-size: 12px; line-height: 1;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transition: var(--trans);
+}
+.member-card:hover .member-card-del { opacity: 1; }
+.member-card-del:hover { background: var(--coral); color: #fff; }
+.member-card-add {
+  padding: 10px 8px; cursor: pointer; text-align: center;
+  transition: transform var(--trans), box-shadow var(--trans);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  border: 1px dashed var(--border); background: transparent;
+}
+.member-card-add:hover {
+  transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,.18);
+  border-color: var(--sage); background: rgba(143,174,139,0.06);
+}
+.member-card-add .add-icon {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: rgba(255,255,255,0.06); border: 1.5px solid var(--text-dim);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 6px; font-size: 1.1rem; color: var(--text-dim);
+  transition: var(--trans);
+}
+.member-card-add:hover .add-icon {
+  border-color: var(--sage); color: var(--sage);
+  background: rgba(143,174,139,0.1);
+}
+.member-card-add .add-label {
+  font-size: 0.62rem; color: var(--text-dim); transition: var(--trans);
+}
+.member-card-add:hover .add-label { color: var(--sage); }
